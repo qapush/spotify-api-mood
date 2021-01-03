@@ -4,7 +4,6 @@
 }
 
 html, body {
-    background-color: lightgrey;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -13,8 +12,14 @@ html, body {
     
 }
 
+body {
+    background-image: url('../gradient.jpg');
+    background-size: cover;
+}
+
 h1 {
     text-align: center;
+    color: white;
 }
 
 h2 {
@@ -23,17 +28,38 @@ h2 {
 
 form {
     text-align: center;
+
+    input, button {
+        height: 40px;
+        font-size: 1.2em;
+        border: none;
+        padding: 0px 10px;
+        border-radius: 2px;
+    }
+
+    button {
+        background-color: white;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: all 0.1s ease-in;
+        
+        &:hover {
+            opacity: 1;
+            background-color: lightseagreen;
+        }
+    }
 }
 
 .result__row {
     margin: auto;
     position: relative;
     bottom: 0px;
+    opacity: 0.8;
     transition: all 0.1s ease-in;
     
 
     &:hover {
-        
+        opacity: 1;
         bottom: 3px;
         box-shadow: 0px 3px 22px -6px rgba(0,0,0,0.67);
     }
@@ -45,7 +71,8 @@ form {
     margin-top: 20px;
     background-color: white;
     border-radius: 5px;
-    
+    padding-right: 10px;
+
 
     .result__cover {
 

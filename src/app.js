@@ -4,8 +4,47 @@ window.addEventListener('DOMContentLoaded', () => {
     
     const form = document.querySelector('form'),
           input = form.querySelector('input'),
-          result = document.querySelector('.result');
+          result = document.querySelector('.result'),
+          examples = [
+              'hit the road',
+              'happy',
+              'chill',
+              'sad',
+              'work',
+              'happy',
+              'cheerful',
+              'calm',
+              'angry',
+              'excited',
+              'broken heart',
+              'in love',
+              'sex',
+              'jogging',
+              'workout',
+              'game',
+              'dance',
+              'party',
+              'hangover',
+              '420',
+              'coding',
+              'country',
+              'sounds of nature',
+              'meditation',
+              'discopolo'
+          ];
 
+    function random(){
+
+        const random = ( Math.floor( Math.random() * Math.floor(examples.length) ) );
+        input.value = examples[random];
+
+    }
+    
+    random();
+
+
+
+    
     form.addEventListener('submit', e => {
 
         e.preventDefault();
@@ -33,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     console.dir(results);
 
                     result.innerHTML = '';
-
+                    form.reset();
                     results.forEach((item) => {
                         result.innerHTML += `
                         <div class="result__row">
