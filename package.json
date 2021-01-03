@@ -1,0 +1,30 @@
+{
+  "name": "spotify-search",
+  "version": "1.0.0",
+  "description": "app for searching music via Spotify API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "spotify",
+    "js",
+    "javascript",
+    "api",
+    "music"
+  ],
+  "author": "qapush",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.2"
+  },
+  "dependencies": {}
+}
