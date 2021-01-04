@@ -1,7 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-
-    
-    
+   
     const form = document.querySelector('form'),
           input = form.querySelector('input'),
           result = document.querySelector('.result'),
@@ -41,25 +39,25 @@ window.addEventListener('DOMContentLoaded', () => {
               'rap'
           ];
 
+    let c;
+
     function random(){
 
         const random = ( Math.floor( Math.random() * Math.floor(examples.length) ) );
         input.value = examples[random];
 
     }
-    
-    random();
-
-
 
     
+
     form.addEventListener('submit', e => {
 
         e.preventDefault();
 
         const requestToken = new XMLHttpRequest();
+        const c = btoa('c6c984025b5f4c229fcb488d03599144:6760ade5df70467b9a60f73b3f105910');
         requestToken.open('POST', 'https://accounts.spotify.com/api/token?grant_type=client_credentials');
-        requestToken.setRequestHeader('Authorization', `Basic YzZjOTg0MDI1YjVmNGMyMjlmY2I0ODhkMDM1OTkxNDQ6MjhhODNlM2U4MTE5NDJjYTljMTZmYWI5YjhmN2UzNDA=`);
+        requestToken.setRequestHeader('Authorization', `Basic ${c}`);
         requestToken.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         requestToken.send();
         requestToken.addEventListener('load', () => {
@@ -108,6 +106,6 @@ window.addEventListener('DOMContentLoaded', () => {
         
     })
     
-
+    random();
 
 });
