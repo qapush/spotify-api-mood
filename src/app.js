@@ -58,9 +58,8 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const requestToken = new XMLHttpRequest();
-        const credentials = btoa('c6c984025b5f4c229fcb488d03599144:28a83e3e811942ca9c16fab9b8f7e340');
         requestToken.open('POST', 'https://accounts.spotify.com/api/token?grant_type=client_credentials');
-        requestToken.setRequestHeader('Authorization', `Basic ${credentials}`);
+        requestToken.setRequestHeader('Authorization', `Basic YzZjOTg0MDI1YjVmNGMyMjlmY2I0ODhkMDM1OTkxNDQ6MjhhODNlM2U4MTE5NDJjYTljMTZmYWI5YjhmN2UzNDA=`);
         requestToken.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         requestToken.send();
         requestToken.addEventListener('load', () => {
@@ -76,8 +75,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 requestMain.addEventListener('load', () => {
                    if(requestMain.status === 200){
                     const results = JSON.parse(requestMain.response).playlists.items;
-                    
-                    console.dir(results);
 
                     result.innerHTML = '';
                     form.reset();
