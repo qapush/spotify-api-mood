@@ -30,7 +30,15 @@ window.addEventListener('DOMContentLoaded', () => {
               'country',
               'sounds of nature',
               'meditation',
-              'discopolo'
+              'disco polo',
+              'learning',
+              'rock',
+              'romantic',
+              'soul',
+              'jazz',
+              'flamenco',
+              'hip hop',
+              'rap'
           ];
 
     function random(){
